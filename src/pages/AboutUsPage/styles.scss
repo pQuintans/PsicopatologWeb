@@ -1,0 +1,55 @@
+#AboutUs {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    main {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .content {
+
+            width: 1200px;
+
+            .p1 {
+                font-family: "Poppins", sans-serif;
+                font-weight: bold;
+                font-size: 24px;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 17px;
+            }
+
+            .p2 {
+                font-family: "Poppins", sans-serif;
+                text-align: justify;
+            }
+
+            .p3 {
+                font-family: "Poppins", sans-serif;
+                text-align: center;
+            }
+
+            .images {
+                img {
+                    width: 250px;
+                    height: 250px;
+                    object-fit: cover;
+                    object-position: 100% 100%;
+                    margin: 17px;
+
+                    &#center {
+                        object-position: 50% 50%;
+                    }
+                }
+
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 17px;
+            }
+        }
+    }
+}

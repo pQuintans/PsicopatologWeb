@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 767px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+
+
+p {
+  &:hover {
+    cursor: default;
+  }
+}
+
+main {
+  z-index: 0;
+}

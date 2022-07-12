@@ -1,0 +1,82 @@
+@import "../../variables";
+
+#ContactPage {
+  display: flex;
+  flex-direction: column;
+
+  main {
+
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #title-section {
+
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+
+      #title {
+          font-size: 40px;
+          font-weight: bold;
+          text-transform: uppercase;
+      }
+  
+      #subtitle {
+          font-size: 20px;
+      }
+
+  }
+
+  #contact-section {
+    width: 1200px;
+    margin: 1rem;
+    
+    
+
+    #input-contact-name, #input-contact-email, #input-contact-phone, #input-contact-subject {
+      border-radius: 2ex;
+	    border-width: .3ex;
+      border-color: transparent;
+	    width: 50%;
+      height: 40px;
+	    background-color: #e8ebeb; 
+    }
+
+    #input-contact-name:focus, #input-contact-email:focus, #input-contact-phone:focus, #input-contact-subject:focus {
+      outline: none;
+      border-color: transparent;
+	    background-color: white;
+	    box-shadow: 0.23ex 0.23ex .50ex 0.2ex rgb(220, 220, 220);
+	    transition: background-color ease-in-out .35s, border-color ease-in-out .35s, box-shadow ease-in-out .35s; 
+    }
+
+    #textarea-contact-message {
+      border-radius: 2ex;
+	    border-color: white;
+	    border-width: .3ex;
+	    width: 98%;
+	    background-color: #e8ebeb;
+    }
+
+    #textarea-contact-message:focus {
+      outline: none;
+	    background-color: white;
+	    border-color: white;
+	    box-shadow: 0.23ex 0.23ex .50ex 0.2ex rgb(220, 220, 220);
+	    transition: background-color ease-in-out .35s, border-color ease-in-out .35s, box-shadow ease-in-out .35s;
+    }
+
+    #asterisk {
+      margin-left: 0.3rem;
+      color: red;
+    }
+
+  }
+
+  
+
+}
+
+}
