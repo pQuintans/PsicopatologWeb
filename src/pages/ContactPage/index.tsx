@@ -13,47 +13,65 @@ export function ContactPage() {
   return (
     <div id="ContactPage">
       <NavBar />
-
-          <main>
-            <div id="title-section">
-              <div id="title">
-                  Fale Conosco!
+      <main>
+        <div id="title-section">
+          <div id="title">
+            Fale Conosco!
+          </div>
+          <div id="subtitle">
+            Entre em contato conosco através do formulário
+          </div>
+        </div>
+        <div id="contact-section">
+          <form>
+            <div className="section">
+              <div id="input-section">
+                <label htmlFor='name'>
+                  <User size={24} id="icon" />
+                  Nome:
+                </label>
+                <input type="text" placeholder="Obrigatório*" required />
               </div>
-              <div id="subtitle">
-                  Entre em contato conosco através do formulário
+              <div id="input-section">
+                <label htmlFor='email'>
+                  <At size={24} id="icon" />
+                  E-mail:
+                </label>
+                <input type="email" placeholder="Obrigatório*" required />
               </div>
             </div>
-            <div id="contact-section">
-              <form>
-                <div id="contact-name-section">
-                  <User size={24} />
-                  <label htmlFor='name'>Nome:<span id="asterisk">*</span></label>
-                  <input type="text" placeholder="Obrigatório*" id="input-contact-name" required/>
-                </div>
-                <div id="contact-email-section">
-                  <At size={24} />
-                  <label htmlFor='email'>E-mail:<span id="asterisk">*</span></label>
-                  <input type="email" placeholder="Obrigatório*" id="input-contact-email" required/>
-                </div>
-                <div id="contact-phone-section">
-                  <Phone size={24} />
-                  <label htmlFor='phone'>Telefone:<span id="asterisk">*</span></label>
-                  <input type="number" placeholder="Obrigatório*" id="input-contact-phone" required/>
-                </div>
-                <div id="contact-subject-section">
-                  <ChatText size={24} />
-                  <label htmlFor='subject'>Assunto:<span id="asterisk">*</span></label>
-                  <input type="text" placeholder="Obrigatório*" id="input-contact-subject" required/>
-                </div>
-                <div id="contact-message-section">
-                  <Envelope size={24} />
-                  <label htmlFor='message'>Mensagem:<span id="asterisk">*</span></label>
-                  <textarea placeholder="Obrigatório*" id="textarea-contact-message" required></textarea>
-                </div>
-              </form>
+            <div className="section">
+              <div id="input-section">
+                <label htmlFor='phone'>
+                  <Phone size={24} id="icon" />
+                  Telefone:
+                </label>
+                <input type="text" />
+              </div>
+              <div id="input-section">
+                <label htmlFor='subject'>
+                  <ChatText size={24} id="icon" />
+                  Assunto:
+                </label>
+                <input type="text" placeholder="Obrigatório*" required />
+              </div>
+            </div>            
+            <div className="section">
+              <div id="input-section" className="text-area-section">
+                <label htmlFor='message'>
+                  <Envelope size={24} id="icon" />
+                  Mensagem:
+                </label>
+                <textarea placeholder="Obrigatório*" required></textarea>
+              </div>
             </div>
+            <div id="button-container">
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
 
-          </main>
+      </main>
 
       <Footer />
     </div>

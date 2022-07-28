@@ -24,6 +24,8 @@ export function NavBar() {
   }
 
   useEffect(() => {
+    document.body.style.overflow = 'auto'
+    updateWindowDimensions();
     window.addEventListener('resize', updateWindowDimensions);
   }, [])
 
@@ -40,7 +42,7 @@ export function NavBar() {
             <span className="background" onClick={handleCloseSandwichMenu}></span>
             <div className="menu"> 
               <Link to="/">Início</Link>
-              <Link to="/">Formulário</Link>
+              <Link to="/form">Formulário</Link>
               <Link to="/perfil">Perfil</Link>
               <Link to="/contato">Contato</Link>
               <Link to="/sobre-nos">Quem Somos</Link>
@@ -50,9 +52,9 @@ export function NavBar() {
       ) : (
         <div className="plain-menu"> 
           <Link to="/">Início</Link>
-          <Link to="/">Formulário</Link>
+          <Link to="/form">Formulário</Link>
           <Link to="/perfil">Perfil</Link>
-          <Link to="/">Contato</Link>
+          <Link to="/contato">Contato</Link>
           <Link to="/sobre-nos">Quem Somos</Link>
         </div>
       )}

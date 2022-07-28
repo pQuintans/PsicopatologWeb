@@ -1,7 +1,9 @@
 @import "../../variables";
+
 #ProfilePage{
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     main{
         margin: 40px 20px;
@@ -9,6 +11,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 600px) {
+            width: 100%;
+            margin: 40px 0;
+        }
 
         #title-section{
             font-family: 'Poppins', sans-serif;
@@ -26,166 +33,194 @@
             }
         }
 
-        #profile-section{
-            width: 40%;
-            background-color: $brand_purple;
-            box-shadow: 0px 6px 12px 0px #00000040;
-            border-radius: 10px;
-            color: white;
+        .infos-section {
             margin-top: 2.5rem;
-            padding: 25px;
-            margin-bottom: 2rem;
 
+            width: 100%;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
 
-            #title-profile {
-                font-size: 30px;
-                font-weight: bold;
-                text-align: center;
-                text-transform: uppercase;
+            gap: 2rem;
 
-                margin-bottom: 1rem;
+            @media (max-width: 1085px) {
+                flex-direction: column;
             }
 
-            #user-name-section{
+            #profile-section {
+                width: 40%;
+                height: 20rem;
+                background-color: $brand_purple;
+                box-shadow: 0px 6px 12px 0px #00000040;
+                border-radius: 10px;
+                color: white;
+                padding: 3rem 5rem;
+    
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                
-                margin-bottom: 1rem;
+                justify-content: center;
+                gap: 1rem;
 
-                #name{                    
+                @media (max-width: 1340px) {
+                    padding: 3rem 1rem;
+                }
+
+                @media (max-width: 1085px) {
+                    width: 70%;
+                    padding: 3rem 5rem;
+                }
+
+                @media (max-width: 792px) {
+                    width: 90%;
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                    border-radius: 0;
+                    padding: 3rem 2rem;
+                }
+    
+                #title-profile {
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+    
+                #user-name-section, #user-email-section{
+                    display: flex;
+                    align-items: center;
+    
+                    #name, #email{                    
+                        width: 15rem;
+                        margin-left: 1rem;
+                        color: #f8f8ff;
+                    }
+                }
+    
+                #input-user-name, #input-user-email, #input-user-password, #input-user-repeat-password{
                     width: 15rem;
-                    margin-left: 0.9rem;
-                    color: #f8f8ff;
+                    height: 1.5rem;
+                    margin-left: 1rem;
+                    display: none;
+    
+                    padding-left: .5rem;
+    
+                    background: #f0f0f0;
+                    color: $brand-purple;
+                    box-shadow: 0px 2px 6px 0px #00000040;
+                    border: none;
+                    border-radius: 5px;
+    
+                    caret-color: $brand-purple;
+            
+                    &:focus {
+                        outline: 0;
+                        box-shadow: 0px 2px 6px 0px #0000006b;
+                    }
+                    
+                    &:hover {
+                        box-shadow: 0px 2px 6px 0px #0000006b;
+                    }
+                }
+    
+                #pencil-line-icon {
+                    margin-left: 1rem;
+                    
+                    transition: .2s;
+    
+                    &:hover{
+                        transform: scale(1.1, 1.1);
+                        cursor: pointer; 
+                    }
+                }
+    
+                #button-container {
+                    display: flex;
+                    gap: 1rem;
+                    width: 90%;
+    
+                    #button-submit, #change-password{
+                        text-transform: uppercase;
+                        background: #f8f8ff;
+                        color: $brand-purple;
+                        border: none;
+                        padding: .5rem;
+                        width: 50%;
+                        border-radius: 25px;
+                        font-size: 12px;
+                        transition: all 0.2s ease-in-out;
+                
+                        cursor: pointer;
+                
+                        &:hover {
+                            filter: opacity(80%)
+                        }
+                    }
                 }
             }
-
-            #user-email-section{
+    
+            #form-section {
+                width: 40%;
+                height: 20rem;
+                background-color: $brand_purple;
+                box-shadow: 0px 6px 12px 0px #00000040;
+                border-radius: 10px;
+                color: white;
+                padding: 3rem 8rem;
+    
                 display: flex;
+                flex-direction: column;
                 align-items: center;
+                justify-content: center;
 
-                margin-bottom: 1rem;
-
-                #email{
-                    width: 15rem;
-                    margin-left: 0.9rem;
-                    color: #f8f8ff;
+                @media (max-width: 1340px) {
+                    padding: 3rem 3rem;
                 }
-            }
 
-            #user-password-section, #user-repeat-password-section{
-                display: flex;
-                align-items: center;
-
-                margin-bottom: 1rem;
-
-                #password{
-                    width: 15rem;
-                    margin-left: 0.9rem;
-                    color: #f8f8ff;
+                @media (max-width: 1085px) {
+                    width: 70%;
+                    padding: 3rem 8rem;
                 }
-            }
 
-            #input-user-name, #input-user-email, #input-user-password, #input-user-repeat-password{
-                width: 15rem;
-                height: 1.5rem;
-                margin-left: 1rem;
-                display: none;
-
-                padding-left: .5rem;
-
-                background: #f0f0f0;
-                color: $brand-purple;
-                box-shadow: 0px 2px 6px 0px #00000040;
-                border: none;
-                border-radius: 5px;
-
-                caret-color: $brand-purple;
-        
-                &:focus {
-                    outline: 0;
-                    box-shadow: 0px 2px 6px 0px #0000006b;
+                @media (max-width: 792px) {
+                    width: 90%;
                 }
-                
-                &:hover {
-                    box-shadow: 0px 2px 6px 0px #0000006b;
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                    border-radius: 0;
+                    padding: 3rem 2rem;
                 }
-            }
-
-            #pencil-line-icon {
-                margin-left: 1rem;
-                
-                transition: .2s;
-
-                &:hover{
-                    transform: scale(1.1, 1.1);
-                    cursor: pointer; 
+    
+                #title-form {
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-transform: uppercase;
+    
+                    margin-bottom: 1rem;
                 }
-            }
-
-            #button-submit{
-                text-transform: uppercase;
-                background: #f8f8ff;
-                color: $brand-purple;
-                border: none;
-                padding: 10px;
-                width: 5rem;
-                border-radius: 25px;
-                font-size: 12px;
-                transition: all 0.2s ease-in-out;
-        
-                cursor: pointer;
-        
-                &:hover {
-                    filter: opacity(80%)
+    
+                #form-date-section, #form-time-section, #form-selected-section{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    margin-bottom: 1rem;
                 }
             }
         }
+    }
 
-        #form-section {
-
-            width: 40%;
-            background-color: $brand_purple;
-            box-shadow: 0px 6px 12px 0px #00000040;
-            border-radius: 10px;
-            color: white;
-            margin-top: 2.5rem;
-            padding: 25px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            #title-form {
-                font-size: 30px;
-                font-weight: bold;
-                text-align: center;
-                text-transform: uppercase;
-
-                margin-bottom: 1rem;
-            }
-
-            #form-date-section, #form-time-section, #form-selected-section{
-
-                display: flex;
-                align-items: center;
-                
-                margin-bottom: 1rem;
-
-                #name{                    
-                    width: 15rem;
-                    margin-left: 0.9rem;
-                    color: #f8f8ff;
-                }
-            }
-
-            #date, #time, #selected {
-                margin-left: 1rem;
-            }
+    footer {
+        position: fixed;
+        bottom: 0;
+    
+        @media (max-width: 1099px) {
+          position: unset;
+          height: 100%;
         }
     }
 }

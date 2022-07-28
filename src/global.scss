@@ -28,3 +28,7 @@ p {
 main {
   z-index: 0;
 }
+
+body, #root {
+  min-height: 100vh;
+}
